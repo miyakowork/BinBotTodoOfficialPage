@@ -12,6 +12,8 @@ describe('product capability sections', () => {
     expect(screen.getByRole('heading', { name: 'AI 是助手，不是前提。' })).toBeVisible()
     expect(screen.getByText('DeepSeek')).toBeVisible()
     expect(screen.getByText('通义千问 Qwen')).toBeVisible()
+    expect(screen.getByText('生成待办')).toBeVisible()
+    expect(screen.queryByRole('button', { name: /生成待办/ })).not.toBeInTheDocument()
     expect(screen.getByRole('heading', { name: '数据留在你的 Mac。' })).toBeVisible()
     expect(screen.getByText('导出 Markdown')).toBeVisible()
   })

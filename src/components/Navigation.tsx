@@ -1,15 +1,19 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { navigationItems } from '../content/site'
 import BrandMark from './BrandMark'
 import ProjectLink from './ProjectLink'
 
 export default function Navigation() {
   const [open, setOpen] = useState(false)
+  const triggerRef = useRef<HTMLButtonElement>(null)
 
   useEffect(() => {
     if (!open) return
     const onKeyDown = (event: KeyboardEvent) => {
-      if (event.key === 'Escape') setOpen(false)
+      if (event.key === 'Escape') {
+        setOpen(false)
+        triggerRef.current?.focus()
+      }
     }
     window.addEventListener('keydown', onKeyDown)
     return () => window.removeEventListener('keydown', onKeyDown)
@@ -32,6 +36,7 @@ export default function Navigation() {
         <div className="nav-actions">
           <ProjectLink className="nav-project-link">查看 GitHub</ProjectLink>
           <button
+            ref={triggerRef}
             className="menu-trigger"
             type="button"
             aria-label={open ? '关闭导航' : '打开导航'}

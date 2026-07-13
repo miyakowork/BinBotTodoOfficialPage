@@ -11,4 +11,12 @@ describe('visual system contract', () => {
     expect(css).toContain('@media (max-width: 720px)')
     expect(css).toContain('prefers-reduced-motion: reduce')
   })
+
+  it('keeps demo content readable and animations finite', () => {
+    const css = readFileSync(resolve(process.cwd(), 'src/styles.css'), 'utf8')
+
+    expect(css).toContain('--ink-faint: #607087')
+    expect(css).toMatch(/\.demo-checkbox\.active\s*\{[^}]*animation:(?![^;}]*infinite)/s)
+    expect(css).toMatch(/@media \(max-width: 720px\)[\s\S]*\.demo-detail\s*\{[^}]*display:block/s)
+  })
 })

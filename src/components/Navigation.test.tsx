@@ -14,7 +14,10 @@ describe('Navigation', () => {
     expect(trigger).toHaveAttribute('aria-expanded', 'true')
     expect(screen.getByRole('navigation', { name: '移动导航' })).toBeVisible()
 
+    screen.getByRole('navigation', { name: '移动导航' }).querySelector('a')?.focus()
+
     await user.keyboard('{Escape}')
     expect(trigger).toHaveAttribute('aria-expanded', 'false')
+    expect(trigger).toHaveFocus()
   })
 })

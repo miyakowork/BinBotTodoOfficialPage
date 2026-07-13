@@ -18,7 +18,7 @@ export default function AISection() {
             <div className="ai-panel-title"><span className="spark">✦</span><strong>说说你准备做什么</strong></div>
             <p>下周准备产品发布会，需要完成演示文稿、整理宣传素材，并给受邀客户发送通知。</p>
             <div className="prompt-attachment"><span>▧</span> 发布会清单.png</div>
-            <div className="ai-input-footer"><span>支持文字与图片</span><button type="button" tabIndex={-1}>生成待办 <span>→</span></button></div>
+            <div className="ai-input-footer"><span>支持文字与图片</span><span className="ai-generate-display">生成待办 <span>→</span></span></div>
           </div>
 
           <div className="ai-result-panel">
