@@ -1,5 +1,7 @@
 .superpowers/
 .worktrees/
+.playwright-cli/
+output/playwright/
 node_modules/
 dist/
 *.tsbuildinfo
