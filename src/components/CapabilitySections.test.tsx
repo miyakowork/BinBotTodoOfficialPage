@@ -18,11 +18,13 @@ describe('product capability sections', () => {
     expect(screen.getByText('导出 Markdown')).toBeVisible()
   })
 
-  it('states the project status without exposing a download action', () => {
+  it('states the released project status with a download action', () => {
     render(<App />)
 
-    expect(screen.getByText('持续开发中')).toBeVisible()
-    expect(screen.getByRole('heading', { name: '下一次完成，从这里开始。' })).toBeVisible()
-    expect(screen.queryByRole('link', { name: /下载/ })).not.toBeInTheDocument()
+    expect(screen.getByText('v3.0.1 已发布')).toBeVisible()
+    expect(screen.getByRole('heading', { name: '现在，就从这里开始。' })).toBeVisible()
+    expect(
+      screen.getAllByRole('link', { name: '下载 macOS 版（Apple Silicon）' }),
+    ).toHaveLength(2)
   })
 })

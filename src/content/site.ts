@@ -5,9 +5,19 @@ export const siteMeta = {
 } as const
 
 export const projectStatus = {
-  available: false,
-  label: '持续开发中',
+  available: true,
+  label: 'v3.0.1 已发布',
   githubUrl: 'https://github.com/miyakowork/BinBotTodo',
+} as const
+
+export const release = {
+  version: '3.0.1',
+  architecture: 'Apple Silicon（arm64）',
+  downloadUrl:
+    'https://github.com/miyakowork/BinBotTodo/releases/download/v3.0.1/BinBot.Todo_3.0.1_aarch64.dmg',
+  releaseUrl: 'https://github.com/miyakowork/BinBotTodo/releases/tag/v3.0.1',
+  signed: false,
+  notarized: false,
 } as const
 
 export const navigationItems = [
@@ -30,7 +40,11 @@ export const faqItems = [
   },
   {
     question: '现在可以下载吗？',
-    answer: 'BinBot Todo 仍在持续开发中，目前还没有公开下载版本。',
+    answer: '可以。官网现已提供 BinBot Todo v3.0.1，当前安装包适用于 Apple Silicon（arm64）Mac。',
+  },
+  {
+    question: '首次打开为什么会出现安全提示？',
+    answer: '当前 v3.0.1 安装包未签名、未公证，因此 macOS Gatekeeper 可能在首次打开时显示安全提示。',
   },
   {
     question: '数据会上传到云端吗？',

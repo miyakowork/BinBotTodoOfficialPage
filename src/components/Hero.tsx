@@ -1,5 +1,5 @@
 import ProductWindow from './ProductWindow'
-import ProjectLink from './ProjectLink'
+import { release } from '../content/site'
 
 export default function Hero() {
   return (
@@ -13,8 +13,21 @@ export default function Hero() {
           BinBot Todo 让你专注完成，而不是忙着整理。
         </p>
         <div className="hero-actions">
-          <a className="primary-action" href="#features">看看它如何工作 <span aria-hidden="true">↓</span></a>
-          <ProjectLink className="secondary-action">关注项目进展 <span aria-hidden="true">↗</span></ProjectLink>
+          <a
+            aria-label="下载 macOS 版（Apple Silicon）"
+            className="primary-action"
+            href={release.downloadUrl}
+          >
+            下载 macOS 版 · Apple Silicon <span aria-hidden="true">↓</span>
+          </a>
+          <a
+            className="secondary-action"
+            href={release.releaseUrl}
+            target="_blank"
+            rel="noreferrer"
+          >
+            查看发布说明 <span aria-hidden="true">↗</span>
+          </a>
         </div>
         <div className="hero-proof" aria-label="产品特点">
           <span>本地优先</span><i />

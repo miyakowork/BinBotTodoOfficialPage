@@ -342,7 +342,12 @@ button { color: inherit; }
 .status-label span { width:7px; height:7px; border-radius:50%; background:#50a7ff; box-shadow:0 0 0 6px rgba(80,167,255,.13); }
 .status-copy h2 { font-size:clamp(42px,4.8vw,68px); }
 .status-copy > p { color:#aabdd0; }
-.status-action { margin-top:30px; background:#fff; color:var(--ink); }
+.status-actions { display:flex; flex-wrap:wrap; gap:12px; margin-top:30px; }
+.status-action,.status-release-link { min-height:46px; display:inline-flex; align-items:center; justify-content:center; gap:12px; padding:0 18px; border-radius:12px; font-size:12px; font-weight:800; transition:transform 180ms ease,box-shadow 180ms ease,background 180ms ease; }
+.status-action { background:#fff; color:var(--ink); }
+.status-release-link { color:#dcecff; border:1px solid rgba(188,220,255,.28); background:rgba(255,255,255,.055); }
+.status-release-link:hover { transform:translateY(-2px); background:rgba(255,255,255,.1); }
+.status-copy > .release-caution { margin-top:18px; color:#8097af; font-size:10px; line-height:1.65; }
 
 .faq-section { background:#f6fbff; }
 .faq-layout { display:grid; grid-template-columns:.72fr 1fr; gap:100px; align-items:start; }
@@ -439,7 +444,8 @@ button { color: inherit; }
   .status-card { width:calc(100% - 24px); grid-template-columns:1fr; gap:12px; padding:42px 24px; border-radius:26px; }
   .status-art { min-height:230px; }
   .ring-b { width:315px; height:315px; }
-  .status-action { width:100%; }
+  .status-actions { flex-direction:column; }
+  .status-action,.status-release-link { width:100%; }
   .faq-layout { gap:45px; }
   .faq-list summary { min-height:70px; font-size:13px; }
   .footer-inner { grid-template-columns:1fr; text-align:center; }
