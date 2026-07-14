@@ -6,18 +6,18 @@ export const siteMeta = {
 
 export const projectStatus = {
   available: true,
-  label: 'v3.0.1 已发布',
+  label: 'v3.0.2 已发布',
   githubUrl: 'https://github.com/miyakowork/BinBotTodoOfficialPage',
 } as const
 
 export const release = {
-  version: '3.0.1',
+  version: '3.0.2',
   architecture: 'Apple Silicon（arm64）',
   downloadUrl:
-    'https://github.com/miyakowork/BinBotTodoOfficialPage/releases/download/v3.0.1/BinBot.Todo_3.0.1_aarch64.dmg',
+    'https://github.com/miyakowork/BinBotTodoOfficialPage/releases/download/v3.0.2/BinBot.Todo_3.0.2_aarch64.dmg',
   releaseUrl:
-    'https://github.com/miyakowork/BinBotTodoOfficialPage/releases/tag/v3.0.1',
-  signed: false,
+    'https://github.com/miyakowork/BinBotTodoOfficialPage/releases/tag/v3.0.2',
+  signed: true,
   notarized: false,
 } as const
 
@@ -41,11 +41,11 @@ export const faqItems = [
   },
   {
     question: '现在可以下载吗？',
-    answer: '可以。官网现已提供 BinBot Todo v3.0.1，当前安装包适用于 Apple Silicon（arm64）Mac。',
+    answer: '可以。官网现已提供 BinBot Todo v3.0.2，当前安装包适用于 Apple Silicon（arm64）Mac。',
   },
   {
     question: '首次打开为什么会出现安全提示？',
-    answer: '当前 v3.0.1 安装包未签名、未公证，因此 macOS Gatekeeper 可能在首次打开时显示安全提示。',
+    answer: '当前 v3.0.2 安装包已完成 ad-hoc 应用包签名，但未使用 Apple Developer ID 且未经公证。首次打开时如出现安全提示，可在系统设置的“隐私与安全性”中选择“仍要打开”。',
   },
   {
     question: '数据会上传到云端吗？',

@@ -21,7 +21,7 @@ describe('product capability sections', () => {
   it('states the released project status with a download action', () => {
     render(<App />)
 
-    expect(screen.getByText('v3.0.1 已发布')).toBeVisible()
+    expect(screen.getByText('v3.0.2 已发布')).toBeVisible()
     expect(screen.getByRole('heading', { name: '现在，就从这里开始。' })).toBeVisible()
     expect(
       screen.getAllByRole('link', { name: '下载 macOS 版（Apple Silicon）' }),
