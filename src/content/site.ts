@@ -7,15 +7,16 @@ export const siteMeta = {
 export const projectStatus = {
   available: true,
   label: 'v3.0.1 已发布',
-  githubUrl: 'https://github.com/miyakowork/BinBotTodo',
+  githubUrl: 'https://github.com/miyakowork/BinBotTodoOfficialPage',
 } as const
 
 export const release = {
   version: '3.0.1',
   architecture: 'Apple Silicon（arm64）',
   downloadUrl:
-    'https://github.com/miyakowork/BinBotTodo/releases/download/v3.0.1/BinBot.Todo_3.0.1_aarch64.dmg',
-  releaseUrl: 'https://github.com/miyakowork/BinBotTodo/releases/tag/v3.0.1',
+    'https://github.com/miyakowork/BinBotTodoOfficialPage/releases/download/v3.0.1/BinBot.Todo_3.0.1_aarch64.dmg',
+  releaseUrl:
+    'https://github.com/miyakowork/BinBotTodoOfficialPage/releases/tag/v3.0.1',
   signed: false,
   notarized: false,
 } as const

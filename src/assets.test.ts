@@ -12,6 +12,6 @@ describe('product assets and metadata', () => {
     expect(html).toContain('简洁优雅的 macOS 待办事项管理工具')
     expect(html).toContain('<noscript>')
     expect(html).toContain('即使未启用 JavaScript')
-    expect(html).toContain('https://github.com/miyakowork/BinBotTodo')
+    expect(html).toContain('https://github.com/miyakowork/BinBotTodoOfficialPage')
   })
 })

@@ -6,14 +6,17 @@ describe('site content', () => {
     expect(siteMeta.title).toBe('BinBot Todo')
     expect(siteMeta.platform).toBe('macOS 10.15+')
     expect(projectStatus.available).toBe(true)
-    expect(projectStatus.githubUrl).toBe('https://github.com/miyakowork/BinBotTodo')
+    expect(projectStatus.githubUrl).toBe(
+      'https://github.com/miyakowork/BinBotTodoOfficialPage',
+    )
     expect(projectStatus.label).toBe('v3.0.1 已发布')
     expect(release).toEqual({
       version: '3.0.1',
       architecture: 'Apple Silicon（arm64）',
       downloadUrl:
-        'https://github.com/miyakowork/BinBotTodo/releases/download/v3.0.1/BinBot.Todo_3.0.1_aarch64.dmg',
-      releaseUrl: 'https://github.com/miyakowork/BinBotTodo/releases/tag/v3.0.1',
+        'https://github.com/miyakowork/BinBotTodoOfficialPage/releases/download/v3.0.1/BinBot.Todo_3.0.1_aarch64.dmg',
+      releaseUrl:
+        'https://github.com/miyakowork/BinBotTodoOfficialPage/releases/tag/v3.0.1',
       signed: false,
       notarized: false,
     })

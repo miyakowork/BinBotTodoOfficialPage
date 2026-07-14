@@ -20,7 +20,7 @@ describe('App', () => {
     downloadLinks.forEach((link) => {
       expect(link).toHaveAttribute(
         'href',
-        'https://github.com/miyakowork/BinBotTodo/releases/download/v3.0.1/BinBot.Todo_3.0.1_aarch64.dmg',
+        'https://github.com/miyakowork/BinBotTodoOfficialPage/releases/download/v3.0.1/BinBot.Todo_3.0.1_aarch64.dmg',
       )
     })
 
@@ -29,7 +29,7 @@ describe('App', () => {
     releaseLinks.forEach((link) => {
       expect(link).toHaveAttribute(
         'href',
-        'https://github.com/miyakowork/BinBotTodo/releases/tag/v3.0.1',
+        'https://github.com/miyakowork/BinBotTodoOfficialPage/releases/tag/v3.0.1',
       )
       expect(link).toHaveAttribute('target', '_blank')
       expect(link).toHaveAttribute('rel', 'noreferrer')
@@ -45,7 +45,10 @@ describe('App', () => {
     const links = screen.getAllByRole('link', { name: /查看 GitHub/ })
     expect(links.length).toBeGreaterThan(0)
     links.forEach((link) => {
-      expect(link).toHaveAttribute('href', 'https://github.com/miyakowork/BinBotTodo')
+      expect(link).toHaveAttribute(
+        'href',
+        'https://github.com/miyakowork/BinBotTodoOfficialPage',
+      )
       expect(link).toHaveAttribute('target', '_blank')
       expect(link).toHaveAttribute('rel', 'noreferrer')
     })
