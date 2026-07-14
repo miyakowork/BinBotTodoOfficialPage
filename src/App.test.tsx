@@ -20,7 +20,7 @@ describe('App', () => {
     downloadLinks.forEach((link) => {
       expect(link).toHaveAttribute(
         'href',
-        'https://github.com/miyakowork/BinBotTodoOfficialPage/releases/download/v3.0.2/BinBot.Todo_3.0.2_aarch64.dmg',
+        'https://github.com/miyakowork/BinBotTodoOfficialPage/releases/download/v3.0.3/BinBot.Todo_3.0.3_aarch64.dmg',
       )
     })
 
@@ -29,14 +29,14 @@ describe('App', () => {
     releaseLinks.forEach((link) => {
       expect(link).toHaveAttribute(
         'href',
-        'https://github.com/miyakowork/BinBotTodoOfficialPage/releases/tag/v3.0.2',
+        'https://github.com/miyakowork/BinBotTodoOfficialPage/releases/tag/v3.0.3',
       )
       expect(link).toHaveAttribute('target', '_blank')
       expect(link).toHaveAttribute('rel', 'noreferrer')
     })
 
     expect(screen.queryByText(/没有公开下载版本/)).not.toBeInTheDocument()
-    expect(screen.getByText('v3.0.2 已发布')).toBeVisible()
+    expect(screen.getByText('v3.0.3 已发布')).toBeVisible()
   })
 
   it('uses safe and consistent GitHub project links', () => {
