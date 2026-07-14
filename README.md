@@ -2,6 +2,8 @@
 
 BinBot Todo 的中文官方网站，以清晰、轻盈的方式介绍这款本地优先的 macOS 待办工具。
 
+官方网站：[https://miyakowork.github.io/BinBotTodoOfficialPage/](https://miyakowork.github.io/BinBotTodoOfficialPage/)
+
 ## 当前状态
 
 BinBot Todo v3.0.1 已公开发布。官网提供 Apple Silicon（arm64）DMG 的直接下载入口，以及对应的 [GitHub Release](https://github.com/miyakowork/BinBotTodoOfficialPage/releases/tag/v3.0.1) 发布说明。
