@@ -9,14 +9,14 @@ describe('site content', () => {
     expect(projectStatus.githubUrl).toBe(
       'https://github.com/miyakowork/BinBotTodoOfficialPage',
     )
-    expect(projectStatus.label).toBe('v3.1.1 已发布')
+    expect(projectStatus.label).toBe('v3.2.0 已发布')
     expect(release).toEqual({
-      version: '3.1.1',
+      version: '3.2.0',
       architecture: 'Apple Silicon（arm64）',
       downloadUrl:
-        'https://github.com/miyakowork/BinBotTodoOfficialPage/releases/download/v3.1.1/BinBot.Todo_3.1.1_aarch64.dmg',
+        'https://github.com/miyakowork/BinBotTodoOfficialPage/releases/download/v3.2.0/BinBot.Todo_3.2.0_aarch64.dmg',
       releaseUrl:
-        'https://github.com/miyakowork/BinBotTodoOfficialPage/releases/tag/v3.1.1',
+        'https://github.com/miyakowork/BinBotTodoOfficialPage/releases/tag/v3.2.0',
       signed: true,
       notarized: false,
     })
@@ -26,7 +26,7 @@ describe('site content', () => {
       '#local',
       '#faq',
     ])
-    expect(faqItems.some((item) => item.answer.includes('v3.1.1'))).toBe(true)
+    expect(faqItems.some((item) => item.answer.includes('v3.2.0'))).toBe(true)
     expect(faqItems.some((item) => item.answer.includes('Apple Silicon'))).toBe(true)
     expect(faqItems.some((item) => item.answer.includes('ad-hoc'))).toBe(true)
     expect(faqItems.some((item) => item.answer.includes('未使用 Apple Developer ID'))).toBe(true)

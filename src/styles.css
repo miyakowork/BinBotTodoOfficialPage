@@ -157,7 +157,7 @@ button { color: inherit; }
 
 .product-window {
   width: 100%;
-  min-height: 540px;
+  min-height: 0;
   overflow: hidden;
   border-radius: 24px;
   background: rgba(255,255,255,0.96);
@@ -167,6 +167,7 @@ button { color: inherit; }
   transform-origin: center;
 }
 .window-chrome { height: 45px; display: flex; align-items: center; gap: 7px; padding: 0 17px; border-bottom: 1px solid var(--line-soft); background: #f9fcff; }
+.product-screenshot { display: block; width: 100%; height: auto; }
 .window-chrome > span:not(.window-title) { width: 9px; height: 9px; border-radius: 50%; background: #d3dfeb; }
 .window-chrome > span:first-child { background: #ff796f; }
 .window-chrome > span:nth-child(2) { background: #ffc24f; }
