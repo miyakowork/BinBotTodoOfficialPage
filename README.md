@@ -6,9 +6,9 @@ BinBot Todo 的中文官方网站，介绍本地优先的待办工具及新版�
 
 ## 当前状态
 
-BinBot Todo v3.1.0 已公开发布。官网提供 Apple Silicon（arm64）DMG 的直接下载入口，以及对应的 [GitHub Release](https://github.com/miyakowork/BinBotTodoOfficialPage/releases/tag/v3.1.0) 发布说明。
+BinBot Todo v3.1.1 已公开发布。官网提供 Apple Silicon（arm64）DMG 的直接下载入口，以及对应的 [GitHub Release](https://github.com/miyakowork/BinBotTodoOfficialPage/releases/tag/v3.1.1) 发布说明。
 
-v3.1.0 安装包已包含「macOS 本地服务启动器 + 浏览器工作台」与 AI 指定数量生成。首页、下载区、FAQ 和页面元数据均对应当前版本。
+v3.1.1 更新莫比乌斯环清单图标，统一应用、菜单栏、浏览器与官网标识。安装包继续包含「macOS 本地服务启动器 + 浏览器工作台」与 AI 指定数量生成。首页、下载区、FAQ 和页面元数据均对应当前版本。
 
 当前安装包使用 ad-hoc 签名，但未使用 Apple Developer ID、也未经过 Apple 公证；首次打开时 macOS Gatekeeper 可能显示安全提示。
 
