@@ -6,17 +6,17 @@ export const siteMeta = {
 
 export const projectStatus = {
   available: true,
-  label: 'v3.2.0 已发布',
+  label: 'v3.3.0 已发布',
   githubUrl: 'https://github.com/miyakowork/BinBotTodoOfficialPage',
 } as const
 
 export const release = {
-  version: '3.2.0',
+  version: '3.3.0',
   architecture: 'Apple Silicon（arm64）',
   downloadUrl:
-    'https://github.com/miyakowork/BinBotTodoOfficialPage/releases/download/v3.2.0/BinBot.Todo_3.2.0_aarch64.dmg',
+    'https://github.com/miyakowork/BinBotTodoOfficialPage/releases/download/v3.3.0/BinBot.Todo_3.3.0_aarch64.dmg',
   releaseUrl:
-    'https://github.com/miyakowork/BinBotTodoOfficialPage/releases/tag/v3.2.0',
+    'https://github.com/miyakowork/BinBotTodoOfficialPage/releases/tag/v3.3.0',
   signed: true,
   notarized: false,
 } as const
@@ -34,7 +34,7 @@ export const workflowItems = [
   { title: '搜索即刻抵达', description: '标题与待办内容即时搜索，⌘K 聚焦输入，状态和标签继续筛选。' },
 ] as const
 
-export const launcherReleaseNotice = 'v3.2.0 带来「轻盈专注」工作台：分组列表、常驻搜索与右侧详情，适配深色模式和窄窗口；AI 默认生成 1 个待办。'
+export const launcherReleaseNotice = 'v3.3.0 让新增与编辑占据主要视图：列表收为辅助导航，内容与属性分栏，窄窗口专注编辑；AI 默认生成 1 个待办。'
 
 export const faqItems = [
   {
@@ -43,7 +43,7 @@ export const faqItems = [
   },
   {
     question: '现在可以下载吗？',
-    answer: `可以。官网现已提供 BinBot Todo v3.2.0，当前安装包适用于 Apple Silicon（arm64）Mac。${launcherReleaseNotice}`,
+    answer: `可以。官网现已提供 BinBot Todo v3.3.0，当前安装包适用于 Apple Silicon（arm64）Mac。${launcherReleaseNotice}`,
   },
   {
     question: '新版启动后怎么使用？',
@@ -59,7 +59,7 @@ export const faqItems = [
   },
   {
     question: '首次打开为什么会出现安全提示？',
-    answer: '当前 v3.2.0 安装包已完成 ad-hoc 应用包签名，但未使用 Apple Developer ID 且未经公证。首次打开时如出现安全提示，可在系统设置的“隐私与安全性”中选择“仍要打开”。',
+    answer: '当前 v3.3.0 安装包已完成 ad-hoc 应用包签名，但未使用 Apple Developer ID 且未经公证。首次打开时如出现安全提示，可在系统设置的“隐私与安全性”中选择“仍要打开”。',
   },
   {
     question: '数据会上传到云端吗？',
@@ -75,7 +75,7 @@ export const faqItems = [
   },
   {
     question: 'AI 可以指定生成多少个待办吗？',
-    answer: '可以。v3.2.0 默认生成 1 个待办，也可通过数量输入框或加减按钮指定 1–50 个。提示词要求严格匹配数量，程序也会校验有效待办的条数；数量不符时自动纠正一次，仍不符则显示错误，不进入添加预览。',
+    answer: '可以。v3.3.0 默认生成 1 个待办，也可通过数量输入框或加减按钮指定 1–50 个。提示词要求严格匹配数量，程序也会校验有效待办的条数；数量不符时自动纠正一次，仍不符则显示错误，不进入添加预览。',
   },
   {
     question: '可以备份自己的数据吗？',

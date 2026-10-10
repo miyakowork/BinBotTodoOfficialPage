@@ -8,7 +8,7 @@ export default function TaskDetailSection() {
           <SectionIntro
             eyebrow="02 · 每一件事的上下文"
             title="不只记下一句话。"
-            description="把完成任务真正需要的内容放在一起。下次打开时，不用重新回忆它从哪里开始。"
+            description="在主要视图中写清待办内容，用独立属性区安排标签、优先级和截止时间。窄窗口下，编辑表单占满内容区域。"
           />
           <div className="detail-feature-list">
             <div><span className="feature-icon">Aa</span><div><strong>备注与说明</strong><p>长内容与一句话备注各有位置。</p></div></div>
