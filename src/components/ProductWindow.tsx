@@ -9,7 +9,7 @@ export default function ProductWindow() {
     <section className="product-window" aria-label="BinBot Todo 任务工作台演示">
       <div className="window-chrome" aria-hidden="true">
         <span /><span /><span />
-        <span className="window-title">BinBot Todo</span>
+        <span className="window-title">127.0.0.1:18420 · 新版浏览器工作台</span>
       </div>
       <div className="product-layout">
         <aside className="demo-sidebar" aria-label="任务筛选演示">

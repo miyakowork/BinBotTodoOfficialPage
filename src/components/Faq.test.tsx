@@ -9,5 +9,8 @@ describe('Faq', () => {
     expect(screen.getByText('BinBot Todo 支持哪些平台？').closest('summary')).not.toBeNull()
     expect(screen.getByText('现在可以下载吗？').closest('summary')).not.toBeNull()
     expect(screen.getByText('AI 功能必须使用吗？').closest('summary')).not.toBeNull()
+    expect(screen.getByText('新版启动后怎么使用？').closest('summary')).not.toBeNull()
+    expect(screen.getByText('浏览器访问哪个地址？').closest('summary')).not.toBeNull()
+    expect(screen.getByText('关闭浏览器会停止应用吗？').closest('summary')).not.toBeNull()
   })
 })

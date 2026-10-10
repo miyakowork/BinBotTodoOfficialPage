@@ -1,15 +1,23 @@
 import { render, screen } from '@testing-library/react'
 import { describe, expect, it } from 'vitest'
 import App from './App'
+import { launcherReleaseNotice } from './content/site'
 
 describe('App', () => {
-  it('presents BinBot Todo as a macOS todo tool', () => {
+  it('explains the new launcher while keeping the current release distinct', () => {
     render(<App />)
 
     expect(
       screen.getByRole('heading', { level: 1, name: '把今天，安排得刚刚好。' }),
     ).toBeVisible()
     expect(screen.getByText('简洁优雅的 macOS 待办工具')).toBeVisible()
+    expect(screen.getAllByText(launcherReleaseNotice)).toHaveLength(2)
+    screen.getAllByText(launcherReleaseNotice).forEach((notice) => {
+      expect(notice).toBeVisible()
+    })
+    expect(screen.getByLabelText('Mac 本地服务与浏览器工作台演示')).toBeVisible()
+    expect(screen.getByText('菜单栏管理')).toBeVisible()
+    expect(screen.queryByText('原生 Mac 体验')).not.toBeInTheDocument()
     expect(
       screen.getByRole('region', { name: 'BinBot Todo 任务工作台演示' }),
     ).toBeVisible()

@@ -1,5 +1,5 @@
 import ProductWindow from './ProductWindow'
-import { release } from '../content/site'
+import { launcherReleaseNotice, release } from '../content/site'
 
 export default function Hero() {
   return (
@@ -10,7 +10,7 @@ export default function Hero() {
         <h1>把今天，安排得刚刚好。</h1>
         <p className="hero-description">
           任务、标签、截止时间和每一个细节，都在一张清楚安静的工作台上。
-          BinBot Todo 让你专注完成，而不是忙着整理。
+          新版由 Mac 应用启动本地服务，自动打开浏览器，让你专注完成。
         </p>
         <div className="hero-actions">
           <a
@@ -29,9 +29,10 @@ export default function Hero() {
             查看发布说明 <span aria-hidden="true">↗</span>
           </a>
         </div>
+        <p className="hero-release-note">{launcherReleaseNotice}</p>
         <div className="hero-proof" aria-label="产品特点">
           <span>本地优先</span><i />
-          <span>原生 Mac 体验</span><i />
+          <span>浏览器工作台</span><i />
           <span>AI 可选</span>
         </div>
       </div>

@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { faqItems, navigationItems, projectStatus, release, siteMeta } from './site'
+import { faqItems, launcherReleaseNotice, navigationItems, projectStatus, release, siteMeta } from './site'
 
 describe('site content', () => {
   it('keeps the product story accurate and release-safe', () => {
@@ -30,5 +30,14 @@ describe('site content', () => {
     expect(faqItems.some((item) => item.answer.includes('Apple Silicon'))).toBe(true)
     expect(faqItems.some((item) => item.answer.includes('ad-hoc'))).toBe(true)
     expect(faqItems.some((item) => item.answer.includes('未使用 Apple Developer ID'))).toBe(true)
+    expect(faqItems.find((item) => item.question === '现在可以下载吗？')?.answer).toContain(launcherReleaseNotice)
+    const address = faqItems.find((item) => item.question === '浏览器访问哪个地址？')?.answer
+    expect(address).toContain('http://127.0.0.1:18420/')
+    expect(address).toContain('localhost')
+    expect(address).toContain('菜单栏显示的实际地址')
+    expect(address).toContain('仅监听本机回环地址')
+    const lifecycle = faqItems.find((item) => item.question === '关闭浏览器会停止应用吗？')?.answer
+    expect(lifecycle).toContain('本地服务仍在运行')
+    expect(lifecycle).toContain('退出并停止服务')
   })
 })

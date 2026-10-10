@@ -1,4 +1,4 @@
-import { projectStatus, release } from '../content/site'
+import { launcherReleaseNotice, projectStatus, release } from '../content/site'
 import BrandMark from './BrandMark'
 
 export default function ProjectStatus() {
@@ -14,6 +14,7 @@ export default function ProjectStatus() {
           <p className="status-label"><span /> {projectStatus.label}</p>
           <h2>现在，就从这里开始。</h2>
           <p>v{release.version} 已开放下载，当前提供 {release.architecture} 版本。</p>
+          <p className="launcher-release-note">{launcherReleaseNotice}</p>
           <div className="status-actions">
             <a
               aria-label="下载 macOS 版（Apple Silicon）"
@@ -31,7 +32,7 @@ export default function ProjectStatus() {
               查看发布说明 <span aria-hidden="true">↗</span>
             </a>
           </div>
-          <p className="release-caution">未签名、未公证；首次打开时 macOS 可能显示安全提示。</p>
+          <p className="release-caution">已进行 ad-hoc 签名，尚未经 Apple 公证；首次打开时 macOS 可能显示安全提示。</p>
         </div>
       </div>
     </section>

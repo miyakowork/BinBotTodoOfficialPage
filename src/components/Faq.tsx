@@ -8,7 +8,7 @@ export default function Faq() {
         <SectionIntro
           eyebrow="FAQ"
           title="关于 BinBot Todo，先说清楚。"
-          description="它仍在成长，但关于平台、数据和 AI，你现在就可以知道答案。"
+          description="了解新版如何启动、访问和退出，以及本地数据、AI 与当前下载版本。"
         />
         <div className="faq-list">
           {faqItems.map((item, index) => (

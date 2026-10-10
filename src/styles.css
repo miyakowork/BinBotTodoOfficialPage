@@ -172,6 +172,7 @@ button { color: inherit; }
 .window-chrome > span:nth-child(2) { background: #ffc24f; }
 .window-chrome > span:nth-child(3) { background: #69cd79; }
 .window-title { margin: auto; padding-right: 47px; color: var(--ink-faint); font-size: 10px; font-weight: 700; }
+.hero-release-note { max-width: 480px; margin: 18px 0 0; color: var(--ink-faint); font-size: 12px; line-height: 1.7; }
 .product-layout { min-height: 495px; display: grid; grid-template-columns: 145px minmax(250px, 1fr) 210px; }
 .demo-sidebar { padding: 30px 15px; background: linear-gradient(180deg,#f3f8fd,#edf5fb); border-right: 1px solid var(--line-soft); }
 .demo-overline { margin: 0 8px 12px; color: var(--ink-faint); font-size: 9px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
@@ -342,6 +343,7 @@ button { color: inherit; }
 .status-label span { width:7px; height:7px; border-radius:50%; background:#50a7ff; box-shadow:0 0 0 6px rgba(80,167,255,.13); }
 .status-copy h2 { font-size:clamp(42px,4.8vw,68px); }
 .status-copy > p { color:#aabdd0; }
+.status-copy > .launcher-release-note { margin-top:16px; padding:12px 15px; border:1px solid rgba(188,220,255,.28); border-radius:12px; color:#dcecff; font-size:12px; line-height:1.7; }
 .status-actions { display:flex; flex-wrap:wrap; gap:12px; margin-top:30px; }
 .status-action,.status-release-link { min-height:46px; display:inline-flex; align-items:center; justify-content:center; gap:12px; padding:0 18px; border-radius:12px; font-size:12px; font-weight:800; transition:transform 180ms ease,box-shadow 180ms ease,background 180ms ease; }
 .status-action { background:#fff; color:var(--ink); }

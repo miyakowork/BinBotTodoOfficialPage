@@ -6,7 +6,7 @@ export default function Footer() {
     <footer className="site-footer">
       <div className="section-shell footer-inner">
         <a className="footer-brand" href="#top"><BrandMark /><span><strong>BinBot Todo</strong><small>把今天，安排得刚刚好。</small></span></a>
-        <p>为 macOS 打造 · 本地优先 · 持续开发中</p>
+        <p>Mac 启动 · 浏览器使用 · 数据本地保存</p>
         <ProjectLink>查看 GitHub <span aria-hidden="true">↗</span></ProjectLink>
       </div>
     </footer>

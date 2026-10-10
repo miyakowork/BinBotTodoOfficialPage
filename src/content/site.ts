@@ -1,7 +1,7 @@
 export const siteMeta = {
   title: 'BinBot Todo',
   platform: 'macOS 10.15+',
-  description: '简洁优雅的 macOS 待办事项管理工具',
+  description: '简洁优雅的 macOS 待办事项管理工具，新版由 Mac 应用启动本地服务，在浏览器中管理待办。',
 } as const
 
 export const projectStatus = {
@@ -34,14 +34,28 @@ export const workflowItems = [
   { title: '搜索即刻抵达', description: '标题与备注即时搜索，状态和标签继续筛选。' },
 ] as const
 
+export const launcherReleaseNotice = '浏览器启动器新版待发布；当前下载仍为 v3.0.5 应用内窗口版。'
+
 export const faqItems = [
   {
     question: 'BinBot Todo 支持哪些平台？',
-    answer: '首版专注于 macOS，最低支持 macOS 10.15。',
+    answer: '应用专注于 macOS，最低支持 macOS 10.15。新版仍需安装 Mac 应用，由它启动本地服务，再通过这台 Mac 的浏览器使用 Todo。',
   },
   {
     question: '现在可以下载吗？',
-    answer: '可以。官网现已提供 BinBot Todo v3.0.5，当前安装包适用于 Apple Silicon（arm64）Mac。',
+    answer: `可以。官网现已提供 BinBot Todo v3.0.5，当前安装包适用于 Apple Silicon（arm64）Mac。${launcherReleaseNotice}`,
+  },
+  {
+    question: '新版启动后怎么使用？',
+    answer: '打开 BinBot Todo.app 后，应用会启动本地服务，并自动在默认浏览器中打开 Todo 工作台。无需另外安装 Node.js 或手动运行命令，也无需注册账号。需要再次打开页面时，可点击菜单栏图标中的“在浏览器中打开 Todo”，或使用已配置的全局快捷键。',
+  },
+  {
+    question: '浏览器访问哪个地址？',
+    answer: '新版首次启动默认访问 http://127.0.0.1:18420/，也支持同一端口的 localhost 地址。如果端口被占用，应用会自动选择空闲端口；请以菜单栏显示的实际地址为准。服务仅监听本机回环地址，其他设备无法通过局域网连接。',
+  },
+  {
+    question: '关闭浏览器会停止应用吗？',
+    answer: '不会。关闭 Todo 标签页或浏览器后，新版的本地服务仍在运行，可随时从菜单栏重新打开工作台。要停止服务，请选择“退出并停止服务”；退出后，本地页面将无法继续使用，重新启动 Mac 应用即可恢复。',
   },
   {
     question: '首次打开为什么会出现安全提示？',
@@ -49,7 +63,11 @@ export const faqItems = [
   },
   {
     question: '数据会上传到云端吗？',
-    answer: '任务、标签、附件和设置保存在你的 Mac 本地。应用目前不提供云同步。',
+    answer: '任务、标签、附件和设置保存在你的 Mac 本地。浏览器是新版的操作界面，数据仍由 Mac 应用保存在本地，不会因为改用浏览器就上传到云端。应用目前不提供云同步；启用 AI 时，相关请求会发送给你配置的服务商。',
+  },
+  {
+    question: '使用新版需要联网吗？',
+    answer: '启动本地服务和使用基础待办功能无需联网。localhost 和 127.0.0.1 都指向当前 Mac；可选 AI 服务和外部链接需要网络连接。',
   },
   {
     question: 'AI 功能必须使用吗？',
@@ -57,6 +75,6 @@ export const faqItems = [
   },
   {
     question: '可以备份自己的数据吗？',
-    answer: '可以。BinBot Todo 支持导出 JSON 备份和便于阅读的 Markdown 文件。',
+    answer: '可以。完整备份使用 .binbottodo 文件，包含待办、标签和图片附件，导入时可选择合并或替换。也支持 JSON 数据导入导出和便于阅读的 Markdown 导出；要保留图片附件，请使用完整备份。',
   },
 ] as const
