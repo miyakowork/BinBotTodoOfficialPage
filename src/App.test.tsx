@@ -4,7 +4,7 @@ import App from './App'
 import { launcherReleaseNotice } from './content/site'
 
 describe('App', () => {
-  it('explains the new launcher while keeping the current release distinct', () => {
+  it('offers the released launcher with matching download and release links', () => {
     render(<App />)
 
     expect(
@@ -28,7 +28,7 @@ describe('App', () => {
     downloadLinks.forEach((link) => {
       expect(link).toHaveAttribute(
         'href',
-        'https://github.com/miyakowork/BinBotTodoOfficialPage/releases/download/v3.0.5/BinBot.Todo_3.0.5_aarch64.dmg',
+        'https://github.com/miyakowork/BinBotTodoOfficialPage/releases/download/v3.1.0/BinBot.Todo_3.1.0_aarch64.dmg',
       )
     })
 
@@ -37,14 +37,15 @@ describe('App', () => {
     releaseLinks.forEach((link) => {
       expect(link).toHaveAttribute(
         'href',
-        'https://github.com/miyakowork/BinBotTodoOfficialPage/releases/tag/v3.0.5',
+        'https://github.com/miyakowork/BinBotTodoOfficialPage/releases/tag/v3.1.0',
       )
       expect(link).toHaveAttribute('target', '_blank')
       expect(link).toHaveAttribute('rel', 'noreferrer')
     })
 
     expect(screen.queryByText(/没有公开下载版本/)).not.toBeInTheDocument()
-    expect(screen.getByText('v3.0.5 已发布')).toBeVisible()
+    expect(screen.queryByText(/待发布|应用内窗口版/)).not.toBeInTheDocument()
+    expect(screen.getByText('v3.1.0 已发布')).toBeVisible()
   })
 
   it('uses safe and consistent GitHub project links', () => {

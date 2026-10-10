@@ -6,17 +6,17 @@ export const siteMeta = {
 
 export const projectStatus = {
   available: true,
-  label: 'v3.0.5 已发布',
+  label: 'v3.1.0 已发布',
   githubUrl: 'https://github.com/miyakowork/BinBotTodoOfficialPage',
 } as const
 
 export const release = {
-  version: '3.0.5',
+  version: '3.1.0',
   architecture: 'Apple Silicon（arm64）',
   downloadUrl:
-    'https://github.com/miyakowork/BinBotTodoOfficialPage/releases/download/v3.0.5/BinBot.Todo_3.0.5_aarch64.dmg',
+    'https://github.com/miyakowork/BinBotTodoOfficialPage/releases/download/v3.1.0/BinBot.Todo_3.1.0_aarch64.dmg',
   releaseUrl:
-    'https://github.com/miyakowork/BinBotTodoOfficialPage/releases/tag/v3.0.5',
+    'https://github.com/miyakowork/BinBotTodoOfficialPage/releases/tag/v3.1.0',
   signed: true,
   notarized: false,
 } as const
@@ -34,7 +34,7 @@ export const workflowItems = [
   { title: '搜索即刻抵达', description: '标题与备注即时搜索，状态和标签继续筛选。' },
 ] as const
 
-export const launcherReleaseNotice = '浏览器启动器新版待发布；当前下载仍为 v3.0.5 应用内窗口版。'
+export const launcherReleaseNotice = '当前下载已包含浏览器启动器与 AI 指定数量生成，默认生成 1 个待办。'
 
 export const faqItems = [
   {
@@ -43,7 +43,7 @@ export const faqItems = [
   },
   {
     question: '现在可以下载吗？',
-    answer: `可以。官网现已提供 BinBot Todo v3.0.5，当前安装包适用于 Apple Silicon（arm64）Mac。${launcherReleaseNotice}`,
+    answer: `可以。官网现已提供 BinBot Todo v3.1.0，当前安装包适用于 Apple Silicon（arm64）Mac。${launcherReleaseNotice}`,
   },
   {
     question: '新版启动后怎么使用？',
@@ -59,7 +59,7 @@ export const faqItems = [
   },
   {
     question: '首次打开为什么会出现安全提示？',
-    answer: '当前 v3.0.5 安装包已完成 ad-hoc 应用包签名，但未使用 Apple Developer ID 且未经公证。首次打开时如出现安全提示，可在系统设置的“隐私与安全性”中选择“仍要打开”。',
+    answer: '当前 v3.1.0 安装包已完成 ad-hoc 应用包签名，但未使用 Apple Developer ID 且未经公证。首次打开时如出现安全提示，可在系统设置的“隐私与安全性”中选择“仍要打开”。',
   },
   {
     question: '数据会上传到云端吗？',
@@ -72,6 +72,10 @@ export const faqItems = [
   {
     question: 'AI 功能必须使用吗？',
     answer: '不需要。AI 完全可选，关闭后仍可使用全部基础待办功能；启用时由你选择服务商并提供 API Key。',
+  },
+  {
+    question: 'AI 可以指定生成多少个待办吗？',
+    answer: '可以。v3.1.0 默认生成 1 个待办，也可通过数量输入框或加减按钮指定 1–50 个。提示词要求严格匹配数量，程序也会校验有效待办的条数；数量不符时自动纠正一次，仍不符则显示错误，不进入添加预览。',
   },
   {
     question: '可以备份自己的数据吗？',

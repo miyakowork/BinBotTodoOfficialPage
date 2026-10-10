@@ -9,14 +9,14 @@ describe('site content', () => {
     expect(projectStatus.githubUrl).toBe(
       'https://github.com/miyakowork/BinBotTodoOfficialPage',
     )
-    expect(projectStatus.label).toBe('v3.0.5 已发布')
+    expect(projectStatus.label).toBe('v3.1.0 已发布')
     expect(release).toEqual({
-      version: '3.0.5',
+      version: '3.1.0',
       architecture: 'Apple Silicon（arm64）',
       downloadUrl:
-        'https://github.com/miyakowork/BinBotTodoOfficialPage/releases/download/v3.0.5/BinBot.Todo_3.0.5_aarch64.dmg',
+        'https://github.com/miyakowork/BinBotTodoOfficialPage/releases/download/v3.1.0/BinBot.Todo_3.1.0_aarch64.dmg',
       releaseUrl:
-        'https://github.com/miyakowork/BinBotTodoOfficialPage/releases/tag/v3.0.5',
+        'https://github.com/miyakowork/BinBotTodoOfficialPage/releases/tag/v3.1.0',
       signed: true,
       notarized: false,
     })
@@ -26,7 +26,7 @@ describe('site content', () => {
       '#local',
       '#faq',
     ])
-    expect(faqItems.some((item) => item.answer.includes('v3.0.5'))).toBe(true)
+    expect(faqItems.some((item) => item.answer.includes('v3.1.0'))).toBe(true)
     expect(faqItems.some((item) => item.answer.includes('Apple Silicon'))).toBe(true)
     expect(faqItems.some((item) => item.answer.includes('ad-hoc'))).toBe(true)
     expect(faqItems.some((item) => item.answer.includes('未使用 Apple Developer ID'))).toBe(true)
@@ -39,5 +39,9 @@ describe('site content', () => {
     const lifecycle = faqItems.find((item) => item.question === '关闭浏览器会停止应用吗？')?.answer
     expect(lifecycle).toContain('本地服务仍在运行')
     expect(lifecycle).toContain('退出并停止服务')
+    const aiCount = faqItems.find((item) => item.question === 'AI 可以指定生成多少个待办吗？')?.answer
+    expect(aiCount).toContain('默认生成 1 个待办')
+    expect(aiCount).toContain('1–50 个')
+    expect(aiCount).toContain('不进入添加预览')
   })
 })
